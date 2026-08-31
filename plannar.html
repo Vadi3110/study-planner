@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Study Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <header class="topbar">
+    <h1>Study Planner</h1>
+    <p class="date" id="today"></p>
+  </header>
+
+  <section class="stats">
+    <div class="stat">
+      <span class="stat-num" id="totalCount">0</span>
+      <span class="stat-label">Total tasks</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="doneCount">0</span>
+      <span class="stat-label">Completed</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="pendingCount">0</span>
+      <span class="stat-label">Pending</span>
+    </div>
+  </section>
+
+  <section class="progress-wrap">
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <span class="progress-text" id="progressText">0% complete</span>
+  </section>
+
+  <section class="form-card">
+    <div class="form-row">
+      <input type="text" id="subjectInput" placeholder="Subject (e.g. Physics)">
+      <input type="text" id="taskInput" placeholder="Task (e.g. Revise chapter 3)">
+    </div>
+    <div class="form-row">
+      <input type="date" id="dateInput">
+      <select id="priorityInput">
+        <option value="low">Low priority</option>
+        <option value="medium" selected>Medium priority</option>
+        <option value="high">High priority</option>
+      </select>
+      <button id="addBtn">Add task</button>
+    </div>
+  </section>
+
+  <section class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="pending">Pending</button>
+    <button class="filter-btn" data-filter="completed">Completed</button>
+  </section>
+
+  <section class="list-wrap">
+    <ul id="taskList"></ul>
+    <p class="empty-msg" id="emptyMsg">No tasks yet. Add your first study task above.</p>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
